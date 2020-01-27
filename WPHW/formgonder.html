@@ -1,0 +1,62 @@
+
+
+<html>
+    <head>
+      
+    </head>
+    <body>
+         
+<script>
+            function getParams(){
+                var idx = document.URL.indexOf('?');
+                var params = new Array();
+                if (idx != -1) {
+                    var pairs = document.URL.substring(idx+1, document.URL.length).split('&');
+                    for (var i=0; i<pairs.length; i++){
+                        nameVal = pairs[i].split('=');
+                        params[nameVal[0]] = nameVal[1];
+                    }
+                }
+                return params;
+            }
+            params = getParams();
+            ad = unescape(params["ad"]);
+            soyad = unescape(params["soyad"]);
+            dogumtarihi = unescape(params["dogumtarihi"]);
+            mail = unescape(params["mail"]);
+            telefon = unescape(params["telefon"]);
+            Cinsiyet = unescape(params["Cinsiyet"]);
+            ilkokul = unescape(params["ilkokul"]);
+            ortaokul = unescape( params["ortaokul"]);
+            lise = unescape(params["dogumtarihi"]);
+            universite = unescape( params["universite"]);
+            yukseklisans = unescape(params["yukseklisans"]);
+            yabancidil = unescape(params["yabancidil"]);
+            ilgialani = unescape(params["ilgialani"]);
+            beceriler = unescape(params["beceriler"]);
+            EkBilgi = unescape(params["EkBilgi"]);
+            
+
+
+            document.write("ad = " + ad + "<br>");
+            document.write("soyad = " + soyad + "<br>");
+            document.write("dogumtarihi =" + dogumtarihi + "<br>");
+            document.write("mail =" + mail + "<br>" );
+            document.write("telefon ="+ telefon + "<br>");
+            document.write("Cinsiyet =" + Cinsiyet + "<br>");
+            document.write("ilkokul =" + ilkokul + "<br>");
+            document.write("ortaokul =" + ortaokul + "<br>");
+            document.write("universite = " + universite + "<br>");
+            document.write("yukseklisans =" + yukseklisans + "<br>");
+            document.write("ilgialani = " + ilgialani + "<br>");
+            document.write("beceriler = " + beceriler + "<br>");
+            document.write("EkBilgi= " + EkBilgi + "<br>");
+           
+
+        </script>
+            
+            
+            
+           
+    </body>
+</html>

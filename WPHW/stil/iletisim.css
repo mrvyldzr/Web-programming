@@ -1,0 +1,116 @@
+body{
+    background-color: #d6c8c8;
+    font: 8pt Tahoma,Verdana;
+    font-family: tahoma;
+    color: #000000;
+}
+
+.container{
+    width: 980px; height: 650px; margin: 10px auto; border:3px dashed #bd652b;  padding:20px 0 20px 40px;
+}
+section{
+    width: 450px;
+    height: 220px;
+    float:left;
+    margin: 0 40px 60px 0;
+}
+aside{
+    width: 450px;
+    height: 120px;
+    float:left;
+    margin: 0 40px 60px 0;
+}
+footer{
+    width: 500px;
+    height: 100px;
+    float: left;
+}
+.baslikkutu{
+    width:450px;
+    padding:0 0 10px 0;
+    margin: 0 0 15px 0;
+    border-bottom: 2px solid #0e0708;
+    color: #02060a;
+    font:bold 19px tahoma;
+}
+section input,aside input{
+    width: 300px;
+    padding: 5px;
+    border:1px dashed #a0a0a0;
+    color: #104579;
+    font-size: 14px;
+
+}
+section input:hover{
+    border: 1px dashed #bd652b;
+    background: #f0ddbc;
+
+}
+input.radyo {
+    width: 15px;
+
+}
+input.onay{
+    width: 15px;
+}
+textarea{
+    width: 930px;
+    height: 65px;
+    padding: 5px;
+    border:1px solid #ddd;
+    color: #4b4b4b;
+    font-size: 14px;
+}
+button{
+    width: 100px;
+    padding:10px 25px;
+    margin: 0 30px 20px 0;
+    color: black;
+    font-size: 14px;
+    background: #24588f;
+    cursor:pointer;
+    border:none;
+
+}
+input.gonder{
+    width: 100px;
+    padding:10px 25px;
+    margin: 0 30px 20px 0;
+    color: black;
+    font-size: 14px;
+    background: #24588f;
+    cursor:pointer;
+    border:none;
+}
+input.temizle{
+
+    width: 100px;
+    padding:10px 25px;
+    margin: 0 30px 20px 0;
+    color: black;
+    font-size: 14px;
+    background: #24588f;
+    cursor:pointer;
+    border:none;
+
+}
+tr:hover {
+    color:#bd652b;
+}
+tr:hover .siyah{
+    color:#000000;
+}
+
+input:focus{
+    outline: none;
+}
+textarea:focus{
+    outline:none;
+}
+#askerlik,#DigerDil{
+    width: 300px;
+    padding: 5px;
+    border:1px dashed #a0a0a0;
+    color: #104579;
+    font-size: 14px;
+}

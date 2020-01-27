@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="content-type" content="text/html" charset="iso-8859-9">
+    
+    <title>Document</title>
+    <script type = "text/javascript">
+    function askerlikdurumu(deger)
+    {
+        if(document.getElementById(deger).type == "Erkek"){
+                document.getElementById("Askerlik").type= "text";
+        }else{
+                document.getElementById("Askerlik").type = "hidden";
+        }
+
+
+    }
+    function YabanciDil(deger){
+            if(document.getElementById(deger).type == "text"){
+                    document.getElementById(deger).type = "hidden";
+
+            }else{
+                    document.getElementById(deger).type = "text";
+            }
+    }
+
+    </script>
+    <script language="javascript" type="text/javascript" src="../WPODEV/js/iletisim.js"></script>
+</head>
+<link rel = "stylesheet" href = "../WPODEV/stil/iletisim.css" type = "text/css" />
+<body>
+
+          
+    <form name = "form1"  action="formgonder.html" method="GET"> 
+    <div class "container">
+        <section>
+            <div class = "baslikkutu">Kişisel Bilgiler</div>
+            <table width = "450" >
+                <tr>
+                        <td width = "145">Ad</td>
+                        <td width = "5">:</td>
+                        <td width = "300"> <input id = "ad" name = "ad" type = "text" placeholder="Adınızı Giriniz..." required= "required" /></td>
+                </tr>
+                <tr>
+                        <td>Soyad</td>
+                        <td>:</td>
+                        <td><input name = "soyad" type = "text" placeholder="Soyadınızı Giriniz..." required= "required"/></td>
+                    
+                </tr>
+                <tr>
+                        <td>Doğum Tarihi</td>
+                        <td>:</td>
+                        <td><input name = "dogumtarihi" type = "date" placeholder="Doğum Tarihini Giriniz..." required= "required"/></td>
+                </tr>
+                <tr>
+                        <td>Mail Adresi</td>
+                        <td>:</td>
+                        <td><input name = "mail" type = "email" placeholder="Mail Adresinizi Giriniz..." required= "required" /></td>
+                </tr>
+                <tr>
+                        <td>Telefon</td>
+                        <td>:</td>
+                        <td><input name = "telefon" type = "text" pattern = "[\(]\d{3}[\)][\s]\d{3}[\s]\d{2}[\s]\d{2}"  placeholder="(xxx) xxx xx xx" required= "required" /></td>
+                </tr>
+                <tr>
+                        <td>Cinsiyet</td>
+                        <td>:</td>
+                        <td class= "siyah" >
+                            <input id = "kadın" name = "Cinsiyet" type = "radio" value = "Kadın" class = "radyo" required= "required" onclick="askerlikdurumu(this.id)"/>KADIN
+                            <input id= "erkek" name = "Cinsiyet" type = "radio" value = "Erkek" class = "radyo" required= "required" onclick="askerlikdurumu(this.id)" />ERKEK
+                            <input id = "Askerlik" name = "Asker" type = "hidden" placeholder= "Askerlik Durumuzu Giriniz" value= ""/>
+
+                        </td>
+                </tr>
+            </table>
+        </form>
+        </section>
+        <section>
+            <div class = "baslikkutu">Eğitim Durumu</div>
+            <table width = "450" >
+                    <tr>
+                            <td width = "145">İlkOkul</td>
+                            <td width = "5">:</td>
+                            <td width = "300"><input name = "ilkokul" type = "text" placeholder="İlk Okulunuzu Giriniz..." required= "required" /></td>
+                    </tr>
+                    <tr>
+                            <td>OrtaOkul</td>
+                            <td>:</td>
+                            <td><input name = "ortaokul" type = "text"  placeholder="Orta Okulunuzu Giriniz..." required= "required" /> </td>
+                        
+                    </tr>
+                    <tr>
+                            <td>Lise</td>
+                            <td>:</td>
+                            <td><input name = "lise" type = "text"  placeholder="Lisenizi Giriniz..." required= "required" /></td>
+                    </tr>
+                    <tr>
+                            <td>Üniversite</td>
+                            <td>:</td>
+                            <td><input name = "universite" type = "text"  placeholder="Üniversitenizi Giriniz..." required= "required" /></td>
+                    </tr>
+                    <tr>
+                            <td>Yüksek Lisans</td>
+                            <td>:</td>
+                            <td><input name = "yukseklisans" type = "text"  placeholder="Yüksek Lisans Yaptığınız Üniversiteyi Giriniz..." required= "required"/></td>
+                    </tr>
+                    <tr>
+                        <td>Yabancı Dil</td>
+                        <td>:</td>
+                        <td class= "siyah">
+                            <input class= "onay" name = "yabancidil" type = "checkbox" value = "" />İngilizce
+                            <input class= "onay" name = "Yabancidil" type = "checkbox" value = "" />Almanca
+                            <input class= "onay" name = "yabancıdil" type = "checkbox" value = "" />Fransızca
+                            <input class= "onay" name = "yabancıdil" type = "checkbox" value = "" onclick = "YabanciDil('DigerDil')" />Diğer
+                            <input id = "DigerDil" name = "DigerDil" type = "hidden" placeholder= "Diğer Bİldiğiniz Dili Giriniz" value= ""/>
+
+                        </td>
+                    </tr>
+                </table>
+        </section>
+        <aside>
+            <div class = "baslikkutu">İlgi Alanları</div>
+            <input class= "onay" name = "ilgialani" type = "checkbox" value = "" />Sinema<br>
+            <input class= "onay" name = "ilgialani" type = "checkbox" value = "" />Tiyatro <br>
+            <input class= "onay" name = "ilgialani" type = "checkbox" value = "" />Spor <br>
+            <input class= "onay" name = "ilgialani" type = "checkbox" value = "" />Kitap/Müzik <br>
+            <input class= "onay" name = "" type = "checkbox" value = "" />Diğer
+
+        </aside>
+        <aside>
+            <div class = "baslikkutu">Beceriler</div>
+            <input class= "onay" name = "beceriler" type = "checkbox" value = "" />HTML<br>
+            <input class= "onay" name = "beceriler" type = "checkbox" value = "" />PHP <br>
+            <input class= "onay" name = "beceriler" type = "checkbox" value = "" />Asp.net <br>
+            <input class= "onay" name = "beceriler" type = "checkbox" value = "" />Css <br>
+            <input class= "onay" name = "" type = "checkbox" value = "" />Diğer
+            
+        </aside>
+        <footer>
+            <div class = "baslikkutu">Ek Bilgiler</div>
+            <textarea required= "required" placeholder="Düşüncelerinizi Giriniz.." name = "EkBilgi" >  </textarea> <br> <br>
+           
+            <input id = "buton" class= "gonder" name = "buton" type = "submit" value = "Gonder"/><input class = "temizle"  name = "buton" id = "buton" type="reset" value="Sıfırla">
+             
+        </footer>
+    </div>
+</form>
+</body>
+<script src = "http://code.jquery.com/jquery-3.0.0.min.js"></script>
+
+
+</html>
